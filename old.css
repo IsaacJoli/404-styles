@@ -1,0 +1,56 @@
+/* PAGE NOT FOUND text*/
+p1 {
+    font-size: 36px; /* font size */
+    font-weight: bolder; /*  bold or other styles */
+    color: var(--primary-text-color); /* text color (red)*/
+
+}
+p2 {
+    font-size: 36px; /* font size */
+    font-weight: bolder; /*  bold or other styles */
+    color: var(--blue-color); /* text color (red)*/
+}
+p3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; /* font size for paragraph text */
+    font-weight: lighter;
+    color: #666; /* Text color */
+    margin-bottom: 25px; /* The spacing is between all paragraphs */
+}
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img.Error {
+    float: left;
+    margin: 5px;
+    top: 100%;
+    right: 0%;
+    z-index: 1 ;
+    width: 50%; 
+    height: auto; 
+}
+/*mountain background*/
+.mountain{
+    background-image: url(../Images/mountain.png);
+}
+
+/* Main section styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Body-container {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+   
+}
+

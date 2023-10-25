@@ -1,123 +1,136 @@
-/* Define CSS variables for colors */
 :root {
-    --primary-color:blue; 
-    --blue-color: #3498db; /* Blue */
-    --secondary-color: #e74c3c; /* Red */
-    --background-color: #f0f0f0; /* Light gray */
-    --text-color: #333; /* Dark gray */
-    --primary-text-color:rgb(199, 34, 28); /* dark red*/
+    --background-color:  rgba(236, 224, 224, 0.6); /* Grayish color*/
+    --block-color: #2d402a; 
+    --text-color: rgb(37,38,41);
+    --header-text-color: rgba(226, 240, 240, 0.728);
+    --text-secondary-color: #e74c3c;    /* Gorious Red  */
+    --secondary-color: rgb(160, 169, 181); 
+    font-size: 60%;
 }
-
-/* Background style */
 body {
+    background: url(../Images/mountain.png) left bottom no-repeat fixed; /* background */
+    background-size: 91%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
     background-color: var(--background-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight:normal;
-
 }
-
-/* PAGE NOT FOUND text*/
-p1 {
-    font-size: 36px; /* font size */
-    font-weight: bolder; /*  bold or other styles */
-    color: var(--primary-text-color); /* text color (red)*/
-
+main {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0; 
 }
-p2 {
-    font-size: 36px; /* font size */
-    font-weight: bolder; /*  bold or other styles */
-    color: var(--blue-color); /* text color (red)*/
-}
-p3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px; /* font size for paragraph text */
-    font-weight: lighter;
-    color: #666; /* Text color */
-    margin-bottom: 25px; /* The spacing is between all paragraphs */
-}
-/* header sections */
 header, footer {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--primary-color);
-    color: white;
-
+    background-color: var(--block-color);
+    position: fixed; /* Fix header and footer in place */
+    width: 100%;
+    z-index: 1; /* header and footer are above other content */
 }
-
-/* Navigation styles */
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
+    color: var(--header-text-color);
+    top: 0; /* Place header at the top of the viewport */
 }
-
-h1{
-    margin: 0; /* Remove default margins */
-    border-color: var(--secondary-color);
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
-    margin-left: 50px;
-}
-
 nav a {
+    display: inline-block;
     text-decoration: none;
-    color: white;
-    margin-right: 10px;
-    transition: color 0.3s ease; /* Hover transition */
+    color: var(--header-text-color);
+    transition: color 0.3s ease;
 }
-
 nav a:hover {
-    color: var(--secondary-color); /* Change link color on hover */
+    color: var(--secondary-color);
 }
-
-/* Main section styles */
-main {
-    display: flex;
-    flex-direction: column;
+.body-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    left: 18%;
+    bottom: 10%;
+    position: absolute;
     align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    box-sizing: border-box;
+    margin-top: 90px;
 }
-
-
-.Body-container {
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
+.text-wrap {
+    padding: 2px;
+    background: rgba(236, 224, 224, 0.8);
+    border-radius: 5px;
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: left;
-   
 }
-
-/*mountain background*/
-.mountain{
-    background-image: url(../Images/mountain.png);
+.text-wrap > * {
+    font-size: 22px;
 }
-/* Images */
-
-img {
-    max-width: 100%;
-    height: auto;
+.text-wrap p{
+    font-size: 26px;
 }
-
 img.Error {
-    float: left;
-    margin: 5px;
-    top: 100%;
-    right: 0%;
-    z-index: 1 ;
-    width: 50%; 
-    height: auto; 
+    width: 350px;
+    margin-right: 85px;
+    left: 5%;
+    bottom: 50%;
+    position: absolute;
+    z-index: 2;
 }
-
-/* Footer styles */
+span {
+    color: var(--text-secondary-color);
+}
+.text-wrap h1 {
+    font-weight: bolder;
+    font-size: 48px;
+}
+img.woman {
+    position: absolute;
+    bottom: 0%;
+    left: 70%;
+    max-width: 30%;
+}
 footer {
-    padding: 10px;
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: var(--header-text-color);
+    width: 100%;
+    z-index: 1;
 }
-
-
+@media (max-width: 768px) {
+    body {
+        background-size: cover; 
+    }
+ header {
+        height: 50px; 
+    }
+     .body-container {
+        left: 5%; 
+        width: 90%; 
+    }
+    .text-wrap {
+        background: rgba(236, 224, 224, 0.9); 
+        width: 90%; 
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        background-size: 100%; 
+    }
+    header {
+        height: 80px; 
+    }
+}
